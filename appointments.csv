@@ -1,0 +1,2 @@
+appointment_id,user_id,service_type,date,time,location,phone,email
+APT-00001,11111,router_installation,2025-08-20,14:00,Istanbul,555-1234,john@example.com

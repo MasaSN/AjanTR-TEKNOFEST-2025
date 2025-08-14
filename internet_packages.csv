@@ -1,0 +1,12 @@
+Package ID,Name,Price (TRY),Data Allowance,Validity,Speed Limit,Additional Features
+PKG1001,Basic 5GB,49.9,5 GB,30 days,10 Mbps,"No rollover, Prepaid only"
+PKG1002,Social Pack,59.9,8 GB,30 days,10 Mbps,Unlimited WhatsApp & Instagram
+PKG1003,Student Max,69.9,12 GB,30 days,20 Mbps,Free access to e-learning platforms
+PKG1004,Family Share,99.9,25 GB (shared),30 days,50 Mbps,Share with up to 4 users
+PKG1005,Weekend Unlimited,79.9,10 GB +,30 days,Unlimited (weekends),Weekend unlimited data
+PKG1006,Speed Boost 50GB,129.9,50 GB,30 days,100 Mbps,Free modem rental
+PKG1007,Night Owl,39.9,5 GB +,30 days,15 Mbps,Unlimited 00:00–06:00 data
+PKG1008,Traveler 1 Week,29.9,3 GB,7 days,20 Mbps,Valid for tourists only
+PKG1009,Unlimited Pro,179.9,Unlimited*,30 days,100 Mbps,Fair Usage Policy after 150 GB
+PKG1010,Data Plus 20GB,89.9,20 GB,30 days,50 Mbps,3-month subscription gives 10GB bonus each month
+PKG1011,Premium Ultra,229.9,Unlimited*,30 days,1 Gbps,"Priority customer support, static IP, no Fair Usage Policy"

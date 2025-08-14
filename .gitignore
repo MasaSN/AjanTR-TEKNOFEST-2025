@@ -1,0 +1,15 @@
+# Python virtual environment
+.venv/
+
+# Local Chroma vector DBs
+chroma_internet_issues_db/
+chroma_internet_packages_db/
+chroma_langchain_db/
+chroma_store_longterm_memory/
+chroma_student_packages_db/
+chroma_telekom_magazalar_db/
+
+# Gradio local files
+.gradio/
+
+__pycache__/
