@@ -16,28 +16,39 @@ pip install -r requirements.txt
 
 **➤ Python Kütüphaneleri**
 
-› langgraph — Grafik tabanlı AI orkestrasyonu
+⬩ langgraph — Grafik tabanlı AI orkestrasyonu
 
-› langchain-core — LangChain çekirdek bileşenleri
+⬩ langchain-core — LangChain çekirdek bileşenleri
 
-› langchain-ollama — Ollama entegrasyonu
+⬩ langchain-ollama — Ollama entegrasyonu
 
-› chromadb — Vektör veritabanı (bellek ve arama)
+⬩ chromadb — Vektör veritabanı (bellek ve arama)
 
-› gradio — Web tabanlı test arayüzü
+⬩ gradio — Web tabanlı test arayüzü
 
-› pandas — Veri işleme
+⬩ pandas — Veri işleme
 
-› numpy — Sayısal hesaplamalar
+⬩ numpy — Sayısal hesaplamalar
 
-› typing-extensions — Genişletilmiş tip desteği
+⬩ typing-extensions — Genişletilmiş tip desteği
 
 **➤ Sistem Gereksinimleri**
 
-› Python: 3.10+
+⬩ Python: 3.10+
 
-› Ollama: Ollama’yı indir
+⬩ Ollama: Ollama’yı indir
 
-› Git (depo klonlamak için)
+⬩ Git (depo klonlamak için)
 
-› Git (depo klonlamak için)
+⬩ Git (depo klonlamak için)
+
+
+## ⚙️ Kurulum ve Çalıştırma Adımları
+
+1️⃣ Depoyu Klonla
+╭────────────╮
+ │        git clone https://github.com/KULLANICI_ADI/DEPO_ADI.git
+cd DEPO_ADI                            │
+ │                                    │
+ │                                    │
+╰────────────╯
