@@ -14,7 +14,7 @@ Aşağıdaki kütüphaneler ve araçlar projeyi çalıştırmak için gereklidir
 
 pip install -r requirements.txt
 
-#➤ Python Kütüphaneleri
+**➤ Python Kütüphaneleri**
 
 › langgraph — Grafik tabanlı AI orkestrasyonu
 
@@ -32,10 +32,12 @@ pip install -r requirements.txt
 
 › typing-extensions — Genişletilmiş tip desteği
 
-#➤ Sistem Gereksinimleri
+**➤ Sistem Gereksinimleri**
 
 › Python: 3.10+
 
 › Ollama: Ollama’yı indir
+
+› Git (depo klonlamak için)
 
 › Git (depo klonlamak için)
