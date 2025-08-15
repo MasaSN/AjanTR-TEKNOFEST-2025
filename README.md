@@ -45,8 +45,37 @@ pip install -r requirements.txt
 
 ## ⚙️ Kurulum ve Çalıştırma Adımları
 
-1️⃣ Depoyu Klonla
-┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ━┓
-┃  git clone https://github.com/KULLANICI_ADI/DEPO_ADI.git     ┃ 
-┃  cd DEPO_ADI                                                 ┃
-┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+**1️⃣ Depoyu Klonla**
+
+┃ git clone https://github.com/KULLANICI_ADI/DEPO_ADI.git     
+┃ cd DEPO_ADI                                                
+
+**2️⃣ Sanal Ortam Oluştur ve Aktifleştir**
+
+┃ python -m venv venv
+┃ source venv/bin/activate   # Mac/Linux
+┃ venv\Scripts\activate      # Windows
+
+**3️⃣ Bağımlılıkları Yükle**
+
+┃ pip install -r requirements.txt
+
+**4️⃣ Modeli İndir**
+
+┃ ollama pull qwen3:8b
+
+**5️⃣ Uygulamayı Başlat**
+
+┃ python main.py
+
+**6️⃣ Arayüze Eriş**
+
+✦Terminalde görünen bağlantıyı (örn. http://127.0.0.1:7860) tarayıcıda aç.
+
+
+
+## 📝 Notlar
+
+⬩ .env dosyasına gerekli ortam değişkenlerini eklemeyi unutmayın.
+⬩ Kullanılacak veri setlerini data/ klasörüne yerleştirin.
+⬩ Proje mimarisi ve araç açıklamaları docs/ klasöründe bulunur.
