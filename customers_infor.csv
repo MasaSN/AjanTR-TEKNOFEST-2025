@@ -1,5 +1,5 @@
-CustomerID,Name,PhoneNumber,Email,Address,Package,AccountStatus,Roaming,is_Student
-11111,John Doe,555-1234,john.doe@example.com,İstiklal Caddesi No:45,unlimited pro,Active,Active,Yes
-22222,Jane Smith,555-5678,jane1@gmail.com,Bahariye Caddesi No:12,Unlimited Pro,Suspended,Inactive,No
-33333,Ali Veli,555-8765,ali.veli@example.com,Selman-ı Pak Caddesi No:8,Premium,Active,Active,No
-44444,Sara Yılmaz,555-4321,sara.yilmaz@example.com,Barbaros Bulvarı No:56,Premium Ultra,Active,Inactive,No
+CustomerID,Name,PhoneNumber,Email,Address,Package,AccountStatus,Roaming,is_Student,AutoBilling,
+11111,John Doe,555-1234,john.doe@example.com,İstiklal Caddesi No:45,unlimited pro,Active,Active,Yes,Active
+22222,Jane Smith,555-5678,jane1@gmail.com,Bahariye Caddesi No:12,Unlimited Pro,Suspended,Inactive,No,Inactive
+33333,Ali Veli,555-8765,ali.veli@example.com,Selman-ı Pak Caddesi No:8,Premium,Active,Active,No,Active
+44444,Sara Yılmaz,555-4321,sara.yilmaz@example.com,Barbaros Bulvarı No:56,Premium Ultra,Active,Inactive,No,Inactive

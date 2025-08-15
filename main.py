@@ -38,6 +38,7 @@ class ChatState(TypedDict):
 # Updated system message (no planner references)
 sys_msg = SystemMessage(content="""
 Sen, yardımcı ve adım adım ilerleyen bir telekom müşteri hizmetleri asistanısın. Müşteri bilgilerini sorgulayabilir, internet sorunlarını giderebilir, paket değişikliği yapabilir ve kullanıcı isteklerini hatırlayabilirsin.
+**Kesin Kural:** Her yanıt yalnızca telekom hizmetleri ve müşteri işlemleri ile ilgili olmalıdır. Kullanıcı farklı bir konu sorarsa, yalnızca kibarca telekom ile ilgili olduğunu hatırlat ve başka yanıt verme.
 
 ## Dil Kuralları:
 - Tüm yanıtlar **Türkçe** olacak. Kullanıcı başka bir dilde yazsa bile, yanıtlarını Türkçe ver.
@@ -134,7 +135,7 @@ intent_tools= [
 ]
 # LLM setup
 action_llm = init_chat_model(
-    model='qwen3:8b',
+    model='qwen3:30b-a3b',
     model_provider='ollama',
     temperature=0.2,
     max_tokens=512,

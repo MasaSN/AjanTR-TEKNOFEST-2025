@@ -5,7 +5,7 @@ from vector_packages import internet_package_retriever
 from langchain.tools import tool
 import pandas as pd
 import json
-import pandas as pd
+import csv
 from datetime import datetime
 
 @tool
@@ -55,6 +55,174 @@ def lookup_customer_bills(customer_id, limit=3, status=None, include_days_left=F
     except Exception as e:
         return json.dumps({"error": str(e)}, ensure_ascii=False)
 
+@tool
+def activate_autobiling(phone_number:str, Authorized:bool):
+
+    """
+    Activates autobilling for a customer if they are authorized.
+
+    This tool updates the customer's roaming status in the database. Authorization
+    must be verified using the `authorize_user` tool before calling this.
+
+    Parameters:
+        phone_number (str): The customer's registered phone number.
+        Authorized (bool): Set to True if the user has been successfully authorized.
+
+    Returns:
+        dict: {
+            "status": "success" | "unauthorized" | "not_found",
+            "message": Human-readable summary,
+            "data": autobilling status (e.g. {"autobilling": "Active"})
+        }
+    """
+    customer = lookup_customer(phone_number)
+    if not customer:
+        return {
+            "status": "not_found",
+            "message": "No customer found with that phone number.",
+            "data": None
+        }
+
+    if customer.get("AutoBilling", "").strip().lower() == "active":
+        return {
+            "status": "success",
+            "message": "autobilling is already active.",
+            "data": {"roaming": "Active"}
+        }
+
+    if not Authorized:
+        return {
+            "status": "unauthorized",
+            "message": "User must be authorized before activating autobilling.",
+            "data": None
+        }
+
+    rows = []
+    found = False
+
+    with open('customers_infor.csv', mode='r', newline='') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            if row['PhoneNumber'] == phone_number:
+                row['AutoBilling'] = 'Active'
+                found = True
+            rows.append(row)
+
+    with open('customers_infor.csv', mode='w', newline='') as file:
+        fieldnames = ["CustomerID", "Name", "PhoneNumber", "Email", "Address", "Package", "AccountStatus", "Roaming","is_Student","AutoBilling"]
+        writer = csv.DictWriter(file, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(rows)
+
+    if found:
+        return {
+            "status": "success",
+            "message": "Auto billing successfully activated for this number.",
+            "data": {"Auto billing ": "Active"}
+        }
+    else:
+        return {
+            "status": "not_found",
+            "message": f"No matching customer found to update autobilling for {phone_number}.",
+            "data": None
+        }
+
+@tool
+def check_autobilling_status(phone_number: str):
+    """
+    Checks the current autobilling status for a given customer.
+
+    Parameters:
+        phone_number (str): The customer's registered phone number.
+
+    Returns:
+        dict: {
+            "status": "success" | "not_found",
+            "message": Human-readable summary,
+            "data": autobilling status (e.g. {"autobilling": "Active"})
+        }
+    """
+    customer = lookup_customer(phone_number)
+    if not customer:
+        return {
+            "status": "not_found",
+            "message": "No customer found with that phone number.",
+            "data": None
+        }
+
+    autobilling_status = customer.get("AutoBilling", "").strip() or "Inactive"
+    return {
+        "status": "success",
+        "message": f"Autobilling status for {phone_number}: {autobilling_status}",
+        "data": {"AutoBilling": autobilling_status}
+    }
+@tool
+def deactivate_autobilling(phone_number: str, Authorized: bool):
+    """
+    Deactivates autobilling for a customer if they are authorized.
+
+    Parameters:
+        phone_number (str): The customer's registered phone number.
+        Authorized (bool): Set to True if the user has been successfully authorized.
+
+    Returns:
+        dict: {
+            "status": "success" | "unauthorized" | "not_found",
+            "message": Human-readable summary,
+            "data": autobilling status (e.g. {"AutoBilling": "Inactive"})
+        }
+    """
+    customer = lookup_customer(phone_number)
+    if not customer:
+        return {
+            "status": "not_found",
+            "message": "No customer found with that phone number.",
+            "data": None
+        }
+
+    if customer.get("AutoBilling", "").strip().lower() == "inactive":
+        return {
+            "status": "success",
+            "message": "Autobilling is already inactive.",
+            "data": {"AutoBilling": "Inactive"}
+        }
+
+    if not Authorized:
+        return {
+            "status": "unauthorized",
+            "message": "User must be authorized before deactivating autobilling.",
+            "data": None
+        }
+
+    rows = []
+    found = False
+
+    with open('customers_infor.csv', mode='r', newline='') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            if row['PhoneNumber'] == phone_number:
+                row['AutoBilling'] = 'Inactive'
+                found = True
+            rows.append(row)
+
+    with open('customers_infor.csv', mode='w', newline='') as file:
+        fieldnames = ["CustomerID", "Name", "PhoneNumber", "Email", "Address", "Package", "AccountStatus", "Roaming", "is_Student", "AutoBilling"]
+        writer = csv.DictWriter(file, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(rows)
+
+    if found:
+        return {
+            "status": "success",
+            "message": "Auto billing successfully deactivated for this number.",
+            "data": {"AutoBilling": "Inactive"}
+        }
+    else:
+        return {
+            "status": "not_found",
+            "message": f"No matching customer found to update autobilling for {phone_number}.",
+            "data": None
+        }
 
 # Example usage
 # customer_id = "11111"
