@@ -11,7 +11,7 @@ Tüm geliştirme sürecinde **yalnızca açık kaynak teknolojiler** kullanılm�
 Aşağıdaki kütüphaneler ve araçlar projeyi çalıştırmak için gereklidir.
 
 > Tüm bağımlılıkları yüklemek için:
-```bash
+
 pip install -r requirements.txt
 
 Python Kütüphaneleri
