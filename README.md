@@ -62,7 +62,9 @@ pip install -r requirements.txt
 
 **4️⃣ Modeli İndir**
 
-┃ ollama pull qwen3:8b
+┃ ollama pull qwen3:30b-a3b
+┃ ollama pull qwen3:1.7b
+
 
 **5️⃣ Uygulamayı Başlat**
 
