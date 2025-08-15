@@ -46,9 +46,7 @@ pip install -r requirements.txt
 ## ⚙️ Kurulum ve Çalıştırma Adımları
 
 1️⃣ Depoyu Klonla
-╭────────────╮
- │        git clone https://github.com/KULLANICI_ADI/DEPO_ADI.git
-cd DEPO_ADI                            │
- │                                    │
- │                                    │
-╰────────────╯
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ━┓
+┃  git clone https://github.com/KULLANICI_ADI/DEPO_ADI.git     ┃ 
+┃  cd DEPO_ADI                                                 ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
