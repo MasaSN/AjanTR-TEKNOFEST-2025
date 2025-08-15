@@ -77,5 +77,7 @@ pip install -r requirements.txt
 ## 📝 Notlar
 
 ⬩ .env dosyasına gerekli ortam değişkenlerini eklemeyi unutmayın.
+
 ⬩ Kullanılacak veri setlerini data/ klasörüne yerleştirin.
+
 ⬩ Proje mimarisi ve araç açıklamaları docs/ klasöründe bulunur.
