@@ -81,3 +81,8 @@ pip install -r requirements.txt
 ⬩ Kullanılacak veri setlerini data/ klasörüne yerleştirin.
 
 ⬩ Proje mimarisi ve araç açıklamaları docs/ klasöründe bulunur.
+
+
+## 📄 Lisans
+
+ⓘ Bu proje **TEKNOFEST** yarışma kurallarına uygundur ve yalnızca açık kaynak kütüphaneler kullanılmıştır.
